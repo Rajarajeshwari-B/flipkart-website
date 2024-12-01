@@ -31,14 +31,21 @@
 @media (max-width: 768px) {
   .categories {
     display: grid; /* Use grid for mobile */
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 5px; /* Adjust gap for mobile */
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Ensure consistent sizing */
+    gap: 10px; /* Adjust gap for mobile */
     justify-content: center;
   }
 
   .categories a {
-    font-size: 11px; /* Slightly smaller font for mobile */
-    padding: 6px 6px; /* Adjust padding */
+    font-size: 12px; /* Adjust font size for readability */
+    padding: 6px; /* Adjust padding for compact design */
+  }
+
+  .categories img {
+    width: 70px; /* Uniform image width */
+    height: 70px; /* Uniform image height */
+    object-fit: cover; /* Keep images proportional */
+    border-radius: 5px; /* Consistent border radius */
   }
 }
 
