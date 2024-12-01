@@ -37,6 +37,7 @@
 @media (max-width: 768px) {
   .categories {
     grid-template-columns: repeat(2, 1fr); /* Force 2 columns for mobile */
+    grid-template-rows: repeat(2, 1fr); /* Force 2 rows on mobile */
     justify-items: center; /* Center items horizontally */
     padding: 5px 10px; /* Reduce padding for mobile */
   }
@@ -48,4 +49,3 @@
     line-height: 30px; /* Center text vertically */
   }
 }
-
