@@ -117,15 +117,19 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .product-list {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 20px; /* Adjust gap between items */
   }
 
   .product-item {
-    max-width: 200px;
+    max-width: none; /* Remove max-width so it fits in the grid */
+    min-width: auto; /* Allow item to fully adapt to grid layout */
   }
 
   .product-item img {
-    width: 120px;
-    height: 120px;
+    width: 100%; /* Make image take up full width */
+    height: auto; /* Maintain aspect ratio */
   }
 }
+
