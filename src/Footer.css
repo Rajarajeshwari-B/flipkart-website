@@ -78,40 +78,41 @@
 }
 
 @media (max-width: 768px) {
-  /* Footer Container: Align sections horizontally on small screens */
+  /* Use Grid Layout for Footer Container */
   .footer-container {
-    flex-direction: row; /* Changed from column to row */
-    justify-content: center; /* Center align the sections horizontally */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    gap: 20px;
+    justify-items: center; /* Center the content in each grid cell */
   }
 
+  /* Adjust section width in grid */
   .footer-section {
-    width: 25%; /* Adjust section width to fit 4 items horizontally */
-    margin-bottom: 0; /* Remove bottom margin to prevent extra space between sections */
+    width: auto; /* Let grid control the size */
     text-align: center; /* Center text in each footer section */
   }
 
-  /* Footer Bottom: Align content horizontally */
+  /* Footer Bottom Section (Grid Layout) */
   .footer-bottom {
-    flex-direction: row; /* Changed from column to row */
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center; /* Center content horizontally */
     align-items: center;
     width: 100%;
+    padding-top: 15px;
   }
 
   .footer-bottom-left,
   .footer-bottom-right {
-    text-align: left; /* Align left for both sections */
+    text-align: center; /* Center the text */
   }
 
   .footer-icons {
-    margin-top: 0; /* Remove margin for icon alignment */
+    margin-top: 10px;
   }
 
   .footer-icons img {
     margin-left: 10px;
-    width: 25px; /* Slightly smaller icons */
-    height: 25px; /* Slightly smaller icons */
+    width: 25px; /* Smaller icons */
+    height: 25px; /* Smaller icons */
   }
 }
-
-  
