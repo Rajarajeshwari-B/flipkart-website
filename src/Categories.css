@@ -1,29 +1,29 @@
 /* Categories Navigation Styles */
 .categories {
-  display: flex; /* Flex layout for larger screens */
+  display: flex;
   justify-content: center; /* Centering the categories horizontally */
-  gap: 20px; /* Space between the links */
-  padding: 8px 20px; /* Padding around the navbar */
+  gap: 10px; /* Reduced space between links for better fit on mobile */
+  padding: 10px; /* Padding around the navbar */
+  flex-wrap: wrap; /* Allows wrapping of items to the next line if needed */
   border-radius: 5px;
-  overflow-x: auto; /* Allows horizontal scrolling if needed */
-  background-color: #f1f1f1; /* Light gray background to match original style */
+  overflow-x: auto; /* Horizontal scrolling if there are many categories */
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 14px; /* Font size for better readability */
-  font-weight: 400; /* Light weight for a cleaner look */
-  padding: 6px 12px; /* Padding for smaller links */
+  font-size: 14px; /* Reduced font size for better visibility on mobile */
+  font-weight: 500; /* Medium weight for readability */
+  padding: 6px 10px; /* Adjusted padding for compact design */
   text-align: center;
-  border-radius: 5px; /* Rounded corners for a modern look */
-  color: #2874f0; /* Flipkart blue color */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 5px; /* Rounded corners for the links */
+  color: blue;
+  word-wrap: break-word; /* Break long words to avoid overflow */
+  max-width: 100px; /* Limit the width to avoid exceeding the screen */
 }
 
 .categories a:hover {
   text-decoration: underline;
-  color: #ffcc00; /* Change text color to Flipkart yellow on hover */
-  background-color: #e7f3ff; /* Light blue background on hover */
+  color: black; /* Change text color to black on hover */
 }
 
 .categories a:active {
@@ -33,18 +33,14 @@
 /* For small screens or mobile devices */
 @media (max-width: 768px) {
   .categories {
-    display: grid; /* Switch to grid layout for mobile */
-    grid-template-columns: repeat(4, 1fr); /* 4 columns layout */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows layout */
-    gap: 10px; /* Space between the grid items */
-    justify-items: center; /* Center items horizontally */
-    padding: 5px 10px; /* Reduce padding for mobile */
+    flex-direction: row; /* Keep items horizontal */
+    justify-content: space-around; /* Distribute items evenly */
   }
 
   .categories a {
-    font-size: 14px; /* Font size for better readability */
-    padding: 12px; /* Increase padding for mobile for better size */
-    height: 125px; /* Sufficient height for visibility */
-    line-height: 22px; /* Center the text vertically */
+    font-size: 12px; /* Smaller font size for better fit */
+    padding: 6px 8px; /* Compact padding */
+    max-width: 80px; /* Restrict width for smaller screens */
   }
 }
+
