@@ -62,7 +62,7 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reduced space between the links */
+  gap: 8px; /* Reduced space between the buttons */
   flex-wrap: nowrap; /* Prevent wrapping into multiple rows */
   justify-content: flex-end; /* Align to the right */
   width: auto; /* Allow the nav-links to take the necessary space */
@@ -73,9 +73,9 @@
   background-color: #2874f0;
   border: none;
   color: white;
-  padding: 8px 20px;
+  padding: 6px 15px; /* Reduced padding to make buttons smaller */
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px; /* Smaller font size */
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
@@ -221,15 +221,15 @@
 
   .nav-links {
     flex-direction: row;
-    gap: 10px;
+    gap: 8px; /* Reduced gap between links */
     width: auto;
     justify-content: flex-end; /* Keep nav links aligned to the right */
     flex-wrap: nowrap; /* Prevent wrapping */
   }
 
   .nav-links button {
-    padding: 8px 15px;
-    font-size: 14px;
+    padding: 6px 12px; /* Adjust padding for smaller buttons */
+    font-size: 12px;
     width: auto;
   }
 
@@ -238,5 +238,6 @@
     height: auto; 
   }
 }
+
 
 
