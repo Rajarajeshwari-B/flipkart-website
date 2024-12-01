@@ -82,12 +82,6 @@
     .items-list {
       justify-content: space-evenly;
     }
-    .item img {
-    width: 70px; /* Fixed width */
-    height: 70px; /* Fixed height */
-    object-fit: cover; /* Ensure consistent aspect ratio */
-    border-radius: 5px; /* Optional: consistent border radius */
-  }
     .item {
       width: 220px; /* Slightly smaller on tablets */
     }
