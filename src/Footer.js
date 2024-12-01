@@ -53,10 +53,6 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Mail Us:</h3>
           <p>Flipkart Internet Private Limited, Buildings Alyssa, Begonia & Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahalli Village, Bengaluru, 560103, Karnataka, India</p>
-          <h3>Registered Office Address:</h3>
-          <p>Flipkart Internet Private Limited, Buildings Alyssa, Begonia & Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahalli Village, Bengaluru, 560103, Karnataka, India</p>
-          <p>CIN: U51109KA2012PTC066107</p>
-          <p>Telephone: 044-45614700 / 044-67415800</p>
         </div>
       </div>
 
