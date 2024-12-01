@@ -221,7 +221,7 @@
 
   .nav-links {
     flex-direction: row;
-    gap: 8px; /* Reduced gap between links */
+    gap: 6px; /* Reduced gap between links */
     width: auto;
     justify-content: flex-end; /* Keep nav links aligned to the right */
     flex-wrap: nowrap; /* Prevent wrapping */
