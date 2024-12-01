@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './PaymentPage.css';
 
-const PaymentPage = () => {
+const PaymentPage = ({ onReset }) => {
   // State to store form values
   const [formData, setFormData] = useState({
     name: '',
@@ -25,9 +25,12 @@ const PaymentPage = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process the payment here or show confirmation
+    // Process the payment logic here
     alert('Payment processed successfully!');
+    window.location.href = "/";
   };
+
+  
 
   return (
     <div className="payment-page">
@@ -160,7 +163,7 @@ const PaymentPage = () => {
 
         <div className="form-actions">
           <button type="submit" className="submit-button">
-            Complete Payment
+            Place Order
           </button>
         </div>
       </form>
@@ -169,3 +172,4 @@ const PaymentPage = () => {
 };
 
 export default PaymentPage;
+
