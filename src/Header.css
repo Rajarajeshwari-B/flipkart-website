@@ -201,42 +201,41 @@
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Keep items on the same line */
+    padding: 10px 15px;
   }
 
   .logo {
-    justify-content: center;
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
 
   .search-bar {
-    width: 100%;
+    width: 50%; /* Adjust width of the search bar */
     margin-top: 10px;
-    justify-content: space-between;
   }
 
   .search-bar input {
-    width: 85%; /* Adjust width of input */
+    width: 85%;
   }
 
   .nav-links {
     flex-direction: row;
-    align-items: stretch;
     gap: 10px;
-    width: 100%;
-    margin-top: 20px;
+    width: auto;
+    justify-content: flex-end; /* Keep nav links aligned to the right */
   }
 
   .nav-links button {
-    width: 100%;
-    text-align: left;
-    padding: 12px 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    width: auto;
   }
 
-  .nav-links a,
-  .nav-links button {
-    margin-top: 5px;
+  /* Reduce navbar height on mobile */
+  .navbar {
+    height: auto; 
   }
 }
+
