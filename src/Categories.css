@@ -44,7 +44,7 @@
   .categories a {
     font-size: 14px; /* Font size for better readability */
     padding: 12px; /* Increase padding for mobile for better size */
-    height: 100px; /* Sufficient height for visibility */
+    height: 120px; /* Sufficient height for visibility */
     line-height: 22px; /* Center the text vertically */
   }
 }
