@@ -20,14 +20,14 @@
 @media (max-width: 768px) {
   /* Adjust the height for smaller screens */
   .banner {
-    height: auto; /* Set height to auto for mobile */
+    height: 500px; /* Set height to auto for mobile */
     margin: 0; /* Remove any margin to eliminate gaps */
   }
 
   .banner img {
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
-    height: 500px; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
     width: 100%; /* Ensure the width is full */
   }
 }
