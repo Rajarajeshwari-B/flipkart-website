@@ -2,29 +2,28 @@
 .categories {
   display: flex;
   justify-content: center; /* Centering the categories horizontally */
-  gap: 30px; /* Space between the links */
-  padding: 10px 20px; /* Padding around the navbar */
-  
-  
+  gap: 20px; /* Reduced space between the links */
+  padding: 8px 20px; /* Padding around the navbar */
   border-radius: 5px;
   overflow-x: auto; /* Allows horizontal scrolling if needed */
-  
+  background-color: #f1f1f1; /* Light gray background to match original style */
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 16px;
-  font-weight: 500; /* Medium weight for readability */
-  padding: 8px 15px; /* Padding for the links */
+  font-size: 14px; /* Reduced font size for a more compact appearance */
+  font-weight: 400; /* Light weight for a cleaner look */
+  padding: 6px 12px; /* Reduced padding for smaller links */
   text-align: center;
-  border-radius: 5px; /* Rounded corners for the links */
-  color: blue;
- 
+  border-radius: 20px; /* Rounded corners for a more modern look */
+  color: #2874f0; /* Flipkart blue color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .categories a:hover {
   text-decoration: underline;
-  color: black; /* Change text color to black on hover */
+  color: #ffcc00; /* Change text color to Flipkart yellow on hover */
+  background-color: #e7f3ff; /* Light blue background on hover */
 }
 
 .categories a:active {
@@ -34,11 +33,14 @@
 /* For small screens or mobile devices */
 @media (max-width: 768px) {
   .categories {
-    flex-direction: column; /* Stack the categories vertically on small screens */
-    align-items: center; /* Center the items */
+    flex-direction: row; /* Keep the categories in a row */
+    justify-content: flex-start; /* Align to the left */
+    padding: 5px 10px; /* Reduce padding for mobile */
   }
-  
+
   .categories a {
-    margin: 5px 0; /* Space between links when stacked */
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 5px 10px; /* Adjust padding for mobile */
   }
 }
+
