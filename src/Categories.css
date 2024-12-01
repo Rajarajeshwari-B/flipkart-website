@@ -1,24 +1,21 @@
 /* Categories Navigation Styles */
 .categories {
-  display: flex;
-  justify-content: center; /* Centering the categories horizontally */
-  gap: 10px; /* Reduced space between links for better fit on mobile */
-  padding: 10px; /* Padding around the navbar */
-  flex-wrap: wrap; /* Allows wrapping of items to the next line if needed */
+  display: grid; /* Use grid for better control */
+  gap: 20px; /* Space between the links */
+  padding: 10px 20px; /* Padding around the navbar */
   border-radius: 5px;
-  overflow-x: auto; /* Horizontal scrolling if there are many categories */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid layout */
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 14px; /* Reduced font size for better visibility on mobile */
+  font-size: 16px; /* Keep original font size */
   font-weight: 500; /* Medium weight for readability */
-  padding: 6px 10px; /* Adjusted padding for compact design */
+  padding: 8px 15px; /* Padding for the links */
   text-align: center;
   border-radius: 5px; /* Rounded corners for the links */
   color: blue;
   word-wrap: break-word; /* Break long words to avoid overflow */
-  max-width: 100px; /* Limit the width to avoid exceeding the screen */
 }
 
 .categories a:hover {
@@ -33,14 +30,21 @@
 /* For small screens or mobile devices */
 @media (max-width: 768px) {
   .categories {
-    flex-direction: row; /* Keep items horizontal */
-    justify-content: space-around; /* Distribute items evenly */
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+    grid-auto-rows: auto; /* Adjust height automatically */
   }
 
   .categories a {
-    font-size: 12px; /* Smaller font size for better fit */
-    padding: 6px 8px; /* Compact padding */
-    max-width: 80px; /* Restrict width for smaller screens */
+    font-size: 14px; /* Slightly smaller font for mobile */
+    padding: 6px 10px; /* Compact padding */
   }
 }
+
+/* For laptops and larger screens */
+@media (min-width: 769px) {
+  .categories {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Retain original layout */
+  }
+}
+
 
