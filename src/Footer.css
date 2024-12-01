@@ -78,24 +78,21 @@
 }
 
 @media (max-width: 768px) {
-  /* Use Grid Layout for Footer Container */
+  /* On Mobile: Make the footer sections horizontal, one after another */
   .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
-    gap: 20px;
-    justify-items: center; /* Center the content in each grid cell */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between sections */
+    gap: 10px; /* Space between each footer section */
   }
 
-  /* Adjust section width in grid */
   .footer-section {
-    width: auto; /* Let grid control the size */
-    text-align: center; /* Center text in each footer section */
+    width: 48%; /* Make each section take up nearly half the width */
+    text-align: left; /* Align text to the left for better readability */
   }
 
-  /* Footer Bottom Section (Grid Layout) */
   .footer-bottom {
-    flex-direction: row;
-    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack footer bottom items vertically on mobile */
     align-items: center;
     width: 100%;
     padding-top: 15px;
@@ -103,7 +100,7 @@
 
   .footer-bottom-left,
   .footer-bottom-right {
-    text-align: center; /* Center the text */
+    text-align: center; /* Center the text on mobile */
   }
 
   .footer-icons {
@@ -111,8 +108,7 @@
   }
 
   .footer-icons img {
-    margin-left: 10px;
-    width: 25px; /* Smaller icons */
-    height: 25px; /* Smaller icons */
+    width: 25px; /* Slightly smaller icons */
+    height: 25px;
   }
 }
