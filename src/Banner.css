@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
   /* Adjust the height for smaller screens */
   .banner {
-    height: 500px; /* Set height to auto for mobile */
+    height: auto; /* Set height to auto for mobile */
     margin: 0; /* Remove any margin to eliminate gaps */
   }
 
