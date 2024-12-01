@@ -27,7 +27,7 @@
   .banner img {
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
-    height: 100%; /* Ensure the image fills the container */
+    height: 500px; /* Ensure the image fills the container */
     width: 100%; /* Ensure the width is full */
   }
 }
