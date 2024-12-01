@@ -1,21 +1,25 @@
 /* Categories Navigation Styles */
 .categories {
-  display: grid; /* Use grid for better control */
-  gap: 20px; /* Space between the links */
+  display: flex;
+  justify-content: center; /* Centering the categories horizontally */
+  gap: 30px; /* Space between the links */
   padding: 10px 20px; /* Padding around the navbar */
+  
+  
   border-radius: 5px;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid layout */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 16px; /* Keep original font size */
+  font-size: 16px;
   font-weight: 500; /* Medium weight for readability */
   padding: 8px 15px; /* Padding for the links */
   text-align: center;
   border-radius: 5px; /* Rounded corners for the links */
   color: blue;
-  word-wrap: break-word; /* Break long words to avoid overflow */
+ 
 }
 
 .categories a:hover {
@@ -35,8 +39,8 @@
   }
 
   .categories a {
-    font-size: 14px; /* Slightly smaller font for mobile */
-    padding: 6px 10px; /* Compact padding */
+    font-size: 12px; /* Slightly smaller font for mobile */
+    padding: 10px 10px; /* Compact padding */
   }
 }
 
