@@ -9,12 +9,14 @@
   font-weight: bold;
   position: relative; /* For dropdown menu */
   flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+  overflow-x: hidden; /* Prevent overflow on small screens */
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex: 1; /* Allow logo to take remaining space on small screens */
+  min-width: 100px; /* Prevent the logo from shrinking too much */
 }
 
 .logo img {
@@ -34,12 +36,13 @@
 .search-bar {
   display: flex;
   align-items: center;
-  width: 40%; /* Adjust the search bar width */
+  width: 100%; /* Full width on mobile */
+  max-width: 500px; /* Limit the width for larger screens */
   background-color: white;
   border-radius: 20px;
   padding: 5px 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 10px; /* Add margin on small screens */
+  margin: 10px 0; /* Space above and below the search bar */
 }
 
 .search-bar input {
@@ -62,10 +65,10 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 8px; /* Reduced space between the buttons */
-  flex-wrap: nowrap; /* Prevent wrapping into multiple rows */
+  gap: 8px; /* Space between the buttons */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: flex-end; /* Align to the right */
-  width: auto; /* Allow the nav-links to take the necessary space */
+  width: 100%; /* Ensure links take full width on smaller screens */
 }
 
 .nav-links a,
@@ -73,9 +76,9 @@
   background-color: #2874f0;
   border: none;
   color: white;
-  padding: 6px 15px; /* Reduced padding to make buttons smaller */
+  padding: 6px 15px; /* Adjust padding */
   border-radius: 20px;
-  font-size: 12px; /* Smaller font size */
+  font-size: 12px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
@@ -93,24 +96,6 @@
   border-radius: 4px; /* Slightly less rounded corners for a rectangle */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the button */
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transition */
-}
-
-/* For Dropdown Buttons */
-.dropdown-toggle {
-  background-color: #2874f0;
-  color: white;
-  padding: 8px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dropdown-toggle:hover {
-  background-color: white; /* White background */
-  color: #2874f0; /* Flipkart blue for text */
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Dropdown Menu */
@@ -138,106 +123,36 @@
   display: block;
 }
 
-/* Search Results */
-.search-results {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 10;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.search-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  transition: background-color 0.2s;
-}
-
-.search-item:hover {
-  background-color: #f9f9f9;
-}
-
-.product-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.search-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-}
-
-.search-link h4 {
-  margin: 0;
-  font-size: 16px;
-  color: black;
-}
-
-.search-link p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #888;
-}
-
-.no-results {
-  padding: 10px;
-  text-align: center;
-  color: #888;
-}
-
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Keep items on the same line */
+    flex-direction: column; /* Stack the navbar items vertically */
+    align-items: center; /* Center-align items */
     padding: 10px 15px;
   }
 
-  .logo {
-    margin-right: 10px;
-  }
-
   .search-bar {
-    width: 50%; /* Adjust width of the search bar */
-    margin-top: 10px;
-  }
-
-  .search-bar input {
-    width: 85%;
+    width: 100%; /* Full width on mobile */
+    margin: 10px 0; /* Add spacing around the search bar */
   }
 
   .nav-links {
-    flex-direction: row;
-    gap: 6px; /* Reduced gap between links */
-    width: auto;
-    justify-content: flex-end; /* Keep nav links aligned to the right */
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping of nav-links */
+    gap: 10px; /* Space between links */
+    width: 100%; /* Full width for nav-links */
+    justify-content: center; /* Center-align links */
   }
 
   .nav-links button {
     padding: 6px 12px; /* Adjust padding for smaller buttons */
     font-size: 12px;
-    width: auto;
   }
 
-  /* Reduce navbar height on mobile */
-  .navbar {
-    height: auto; 
+  .cart {
+    margin: 0 auto; /* Center the cart icon */
   }
 }
+
 
 
 
