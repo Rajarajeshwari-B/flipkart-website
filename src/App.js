@@ -24,26 +24,37 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header cartCount={cartCount}  />
-        
+        <Header cartCount={cartCount} />
+
         <Routes>
-          <Route path="/" element={
-            <>
-              <Categories />
-              <Banner />
-              <ProductSection handleAddToCart={handleAddToCart} />
-              <Footer />
-            </>
-          } />
-          
+          {/* Starting page route */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Categories />
+                <Banner />
+                <ProductSection handleAddToCart={handleAddToCart} />
+                <Footer />
+              </>
+            }
+          />
+
           <Route path="/login" element={<Login />} />
-          <Route path="/payment" element={<PaymentPage />} />
+          <Route
+            path="/payment"
+            element={
+              <PaymentPage
+                onReset={() => {
+                  window.location.href = "/"; // Redirect to the starting page
+                }}
+              />
+            }
+          />
           <Route path="/become-seller" element={<BecomeSeller />} />
-          
-        <Route path="/category/:category" element={<CategoryItems />} />
+          <Route path="/category/:category" element={<CategoryItems />} />
           <Route path="/cart" element={<Cart cartItems={cartItems} />} />
           <Route path="/product/:category/:productName" element={<ProductDetail />} />
-          
         </Routes>
       </div>
     </Router>
@@ -51,3 +62,4 @@ function App() {
 }
 
 export default App;
+
