@@ -1,25 +1,21 @@
 /* Categories Navigation Styles */
 .categories {
   display: flex;
-  justify-content: center; /* Centering the categories horizontally */
+  justify-content: center; /* Center the categories horizontally */
   gap: 30px; /* Space between the links */
   padding: 10px 20px; /* Padding around the navbar */
-  
-  
   border-radius: 5px;
   overflow-x: auto; /* Allows horizontal scrolling if needed */
-  
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 16px;
+  font-size: 16px; /* Keep original font size */
   font-weight: 500; /* Medium weight for readability */
   padding: 8px 15px; /* Padding for the links */
   text-align: center;
   border-radius: 5px; /* Rounded corners for the links */
   color: blue;
- 
 }
 
 .categories a:hover {
@@ -34,21 +30,24 @@
 /* For small screens or mobile devices */
 @media (max-width: 768px) {
   .categories {
-    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
-    grid-auto-rows: auto; /* Adjust height automatically */
+    display: grid; /* Use grid for mobile */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* Adjust gap for mobile */
+    justify-content: center;
   }
 
   .categories a {
-    font-size: 12px; /* Slightly smaller font for mobile */
-    padding: 10px 10px; /* Compact padding */
+    font-size: 14px; /* Slightly smaller font for mobile */
+    padding: 10px 8px; /* Adjust padding */
   }
 }
 
 /* For laptops and larger screens */
 @media (min-width: 769px) {
   .categories {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Retain original layout */
+    display: flex; /* Retain the original flex layout */
+    justify-content: center; /* Center the items */
+    gap: 30px; /* Space between links */
   }
 }
-
 
