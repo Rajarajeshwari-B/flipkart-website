@@ -51,7 +51,7 @@
 @media (max-width: 768px) {
   /* Adjust the height for smaller screens */
   .banner {
-    height: 100vh; /* Reduced height for mobile to ensure visibility */
+    height: 200px; /* Reduced height for mobile to ensure visibility */
      
   }
 
