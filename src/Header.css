@@ -199,47 +199,82 @@
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Keep items on the same line */
-    padding: 10px 15px;
-  }
-  .product-img {
-    width: 70px; /* Fixed width */
-    height: 70px; /* Fixed height */
-    object-fit: cover; /* Ensure consistent aspect ratio */
-    border-radius: 5px; /* Optional: consistent border radius */
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Vertically center the elements */
+    padding: 10px 15px; /* Adjust padding */
+    background-color: #2874f0; /* Flipkart blue color */
   }
 
+  /* Logo section with icon and text */
   .logo {
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between the logo and text */
   }
 
+  .logo img {
+    width: 50px; /* Smaller logo size */
+    height: auto;
+  }
+
+  .logo small {
+    font-size: 12px; /* Adjust font size */
+    color: white;
+  }
+
+  .plus {
+    color: #ffcc00; /* Flipkart Plus color */
+    font-size: 12px; /* Adjust size for small devices */
+    font-weight: bold;
+  }
+
+  /* Navigation links (icons like Login, Cart) */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icons */
+  }
+
+  .nav-links a,
+  .nav-links button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px; /* Smaller font size */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Search bar styling */
   .search-bar {
-    width: 50%; /* Adjust width of the search bar */
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
     margin-top: 10px;
+    width: 100%; /* Full width on mobile */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .search-bar input {
-    width: 85%;
+    flex: 1; /* Take the available space */
+    border: none;
+    outline: none;
+    font-size: 14px; /* Smaller text for input */
+    padding: 5px;
+    border-radius: 20px;
   }
 
-  .nav-links {
-    flex-direction: row;
-    gap: 6px; /* Reduced gap between links */
-    width: auto;
-    justify-content: flex-end; /* Keep nav links aligned to the right */
-    flex-wrap: nowrap; /* Prevent wrapping */
-  }
-
-  .nav-links button {
-    padding: 6px 6px; /* Adjust padding for smaller buttons */
-    font-size: 12px;
-    width: auto;
-  }
-
-  /* Reduce navbar height on mobile */
-  .navbar {
-    height: auto; 
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px; /* Adjust size for search icon */
+    color: #2874f0; /* Blue color */
+    cursor: pointer;
   }
 }
