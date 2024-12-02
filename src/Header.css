@@ -36,7 +36,7 @@
   width: 40%; /* Adjust the search bar width */
   background-color: white;
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 2px 10px; /* Reduced padding to make the bar shorter */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 10px; /* Add margin on small screens */
 }
@@ -45,7 +45,7 @@
   width: 90%;
   border: none;
   outline: none;
-  padding: 5px 10px;
+  padding: 5px 5px;
   font-size: 16px;
   border-radius: 20px;
 }
@@ -74,7 +74,7 @@
   color: white;
   padding: 6px 15px; /* Reduced padding to make buttons smaller */
   border-radius: 20px;
-  font-size: 12px; /* Smaller font size */
+  font-size: 14px; /* Increased font size for better visibility */
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
@@ -196,84 +196,52 @@
   color: #888;
 }
 
+/* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between; /* Space out logo and nav-links */
-    align-items: center; /* Vertically center the items */
-    padding: 8px 15px; /* Adjust padding for a compact layout */
-    background-color: #2874f0; /* Flipkart blue color */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Keep items on the same line */
+    padding: 10px 15px;
   }
 
-  /* Logo section */
+  .product-img {
+    width: 70px; /* Fixed width */
+    height: 70px; /* Fixed height */
+    object-fit: cover; /* Ensure consistent aspect ratio */
+    border-radius: 5px; /* Optional: consistent border radius */
+  }
+
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between logo and text */
+    margin-right: 10px;
   }
 
-  .logo img {
-    width: 50px; /* Smaller logo size */
-    height: auto;
-  }
-
-  .logo small {
-    font-size: 12px; /* Adjust font size */
-    color: white;
-  }
-
-  .plus {
-    color: #ffcc00; /* Flipkart Plus color */
-    font-size: 12px;
-    font-weight: bold;
-  }
-
-  /* Navigation links (icons like Login, Cart) */
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icons */
-  }
-
-  .nav-links a,
-  .nav-links button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 14px; /* Adjust font size */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  /* Search bar styling */
   .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 15px; /* Reduced border radius */
-    padding: 3px 8px; /* Reduced padding for a thinner bar */
-    margin-top: 10px; /* Space between header and search bar */
-    width: 100%; /* Full width on mobile */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Adjust width of the search bar */
+    margin-top: 10px;
   }
 
   .search-bar input {
-    flex: 1; /* Take the remaining space */
-    border: none;
-    outline: none;
-    font-size: 14px; /* Adjust font size */
-    padding: 5px;
-    border-radius: 15px;
+    width: 85%;
   }
 
-  .search-bar button {
-    background-color: transparent;
-    border: none;
-    font-size: 18px; /* Adjust size for search icon */
-    color: #2874f0; /* Blue color */
-    cursor: pointer;
+  .nav-links {
+    flex-direction: row;
+    gap: 6px; /* Reduced gap between links */
+    width: auto;
+    justify-content: flex-end; /* Keep nav links aligned to the right */
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .nav-links button {
+    padding: 6px 6px; /* Adjust padding for smaller buttons */
+    font-size: 12px;
+    width: auto;
+  }
+
+  /* Reduce navbar height on mobile */
+  .navbar {
+    height: auto; 
   }
 }
+
