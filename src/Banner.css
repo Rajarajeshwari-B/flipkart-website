@@ -48,14 +48,14 @@
 @media (max-width: 768px) {
   /* Adjust the height for smaller screens */
   .banner {
-    height: 300px; /* Reduced height for mobile to ensure visibility */
+    height: 400px; /* Reduced height for mobile to ensure visibility */
   }
 
   .banner img {
     object-fit: cover; /* Ensure the image covers the container on mobile */
     object-position: center; /* Keep the image centered */
     width: 100%;
-    height: auto; /* Ensure image takes up full height */
+    height: 100%; /* Ensure image takes up full height */
   }
 
   .arrow {
