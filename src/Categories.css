@@ -63,7 +63,7 @@
   }
    .categories img {
     width: 100%; /* Make the image occupy the full width of its container */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image fits without distortion */
     border-radius: 5px; /* Rounded corners */
   }
