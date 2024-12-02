@@ -54,8 +54,8 @@
   .banner img {
     object-fit: cover; /* Ensure the image covers the container on mobile */
     object-position: center; /* Keep the image centered */
-    width: 200px;
-    height: 100%; /* Ensure image takes up full height */
+    width: 100%;
+    height: auto; /* Ensure image takes up full height */
   }
 
   .arrow {
