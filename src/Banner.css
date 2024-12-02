@@ -20,15 +20,15 @@
 @media (max-width: 768px) {
   /* Adjust the height dynamically for smaller screens */
   .banner {
-    height: 70vh; /* Use 70% of the viewport height */
-    margin: 0; /* Ensure no gap around the banner */
+    height: 100vh; /* Use 70% of the viewport height */
+    
   }
 
   .banner img {
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
-    width: auto; /* Ensure the image stretches to full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Ensure the image stretches to full width */
+    height: 100%; /* Maintain aspect ratio */
   }
 }
 
