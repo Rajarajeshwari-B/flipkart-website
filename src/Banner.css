@@ -55,7 +55,7 @@
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
     width:100%;
-    height:auto;
+    height:100%;
   }
 
   .arrow {
