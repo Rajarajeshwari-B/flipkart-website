@@ -49,14 +49,13 @@
   /* Adjust the height for smaller screens */
   .banner {
     height: 400px; /* Reduced height for mobile to ensure visibility */
-    width: 200%;
   }
 
   .banner img {
     object-fit: cover; /* Ensure the image covers the container on mobile */
     object-position: center; /* Keep the image centered */
     width: 100%;
-    height: 100%; /* Ensure image takes up full height */
+    height: 80%; /* Ensure image takes up full height */
   }
 
   .arrow {
