@@ -196,21 +196,20 @@
   color: #888;
 }
 
-/* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center; /* Vertically center the elements */
-    padding: 10px 15px; /* Adjust padding */
+    justify-content: space-between; /* Space out logo and nav-links */
+    align-items: center; /* Vertically center the items */
+    padding: 8px 15px; /* Adjust padding for a compact layout */
     background-color: #2874f0; /* Flipkart blue color */
   }
 
-  /* Logo section with icon and text */
+  /* Logo section */
   .logo {
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between the logo and text */
+    gap: 5px; /* Space between logo and text */
   }
 
   .logo img {
@@ -225,7 +224,7 @@
 
   .plus {
     color: #ffcc00; /* Flipkart Plus color */
-    font-size: 12px; /* Adjust size for small devices */
+    font-size: 12px;
     font-weight: bold;
   }
 
@@ -241,7 +240,7 @@
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px; /* Adjust font size */
     padding: 0;
     display: flex;
     align-items: center;
@@ -254,20 +253,20 @@
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin-top: 10px;
+    border-radius: 15px; /* Reduced border radius */
+    padding: 3px 8px; /* Reduced padding for a thinner bar */
+    margin-top: 10px; /* Space between header and search bar */
     width: 100%; /* Full width on mobile */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .search-bar input {
-    flex: 1; /* Take the available space */
+    flex: 1; /* Take the remaining space */
     border: none;
     outline: none;
-    font-size: 14px; /* Smaller text for input */
+    font-size: 14px; /* Adjust font size */
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 15px;
   }
 
   .search-bar button {
