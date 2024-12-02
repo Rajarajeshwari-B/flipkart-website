@@ -40,7 +40,6 @@
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Keep items in a single row */
     padding: 5px 10px; /* Reduce padding for compact design */
-    gap: 15px; /* Adjust gap for mobile */
     scroll-behavior: smooth; /* Smooth scrolling for better UX */
   }
 
@@ -58,17 +57,25 @@
   }
 
   .categories a {
-    flex: 0 0 calc(25% - 10px); /* Show 4 items per row initially on mobile */
+    flex: 0 0 calc(30% - 10px); /* Width of each item */
     display: inline-block; /* Prevent wrapping in mobile view */
+    text-align: center; /* Center-align text */
+    padding: 5px; /* Reduce padding inside the box */
   }
-   .categories img {
-    width: 100%; /* Make the image occupy the full width of its container */
-    height: 100%; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits without distortion */
+
+  .categories img {
+    width: 100%; /* Full width for the image */
+    height: 80px; /* Fixed height for images */
+    object-fit: cover; /* Ensure the image fits well */
     border-radius: 5px; /* Rounded corners */
+    margin-bottom: 5px; /* Space between image and text */
+  }
+
+  .categories span {
+    font-size: 12px; /* Smaller text for visibility */
+    display: block; /* Ensure text appears below the image */
+    overflow: hidden; /* Handle long text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    white-space: nowrap; /* Prevent wrapping */
   }
 }
-
-
-
-
