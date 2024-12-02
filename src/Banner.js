@@ -1,43 +1,36 @@
 import React, { useState } from 'react';
 import './Banner.css';
 import bannerImage from './assets/banner.png';
+import bannerImage2 from './assets/banner2.png';
+import bannerImage3 from './assets/banner3.png';
+
 
 const Banner = () => {
-  const [isDragging, setIsDragging] = useState(false);
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const banners = [bannerImage, bannerImage2, bannerImage3];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setOffset({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
-    });
-    e.preventDefault(); // Prevent selection of text while dragging
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
   };
 
-  const handleMouseMove = (e) => {
-    if (isDragging) {
-      setPosition({
-        x: e.clientX - offset.x,
-        y: e.clientY - offset.y,
-      });
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
   };
 
   return (
-    <div
-      className="banner"
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      onMouseDown={handleMouseDown}
-    >
-      <img src={bannerImage} alt="Main Banner" />
+    <div className="banner-container">
+      <div className="banner">
+        <img src={banners[currentIndex]} alt={`Banner ${currentIndex + 1}`} />
+      </div>
+      <button className="arrow arrow-left" onClick={handlePrev}>
+        &#9664; {/* Left arrow */}
+      </button>
+      <button className="arrow arrow-right" onClick={handleNext}>
+        &#9654; {/* Right arrow */}
+      </button>
     </div>
   );
 };
 
 export default Banner;
+
