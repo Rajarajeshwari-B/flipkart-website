@@ -74,7 +74,7 @@
   text-decoration: none;
 }
 
-
+.nav-links a,
 .nav-links button {
   background-color: #2874f0;
   border: none;
@@ -88,7 +88,7 @@
   text-decoration: none; /* Ensure links have no underline */
 }
 
-
+.nav-links a:hover,
 .nav-links button:hover {
   background-color: white; /* White background on hover */
   color: #2874f0; /* Flipkart blue color for text */
@@ -245,5 +245,6 @@
     height: auto; 
   }
 }
+
 
 
