@@ -61,20 +61,14 @@
     flex: 0 0 calc(25% - 10px); /* Show 4 items per row initially on mobile */
     display: inline-block; /* Prevent wrapping in mobile view */
   }
-}
-
-/* Larger screens (laptop and above) */
-@media (min-width: 769px) {
-  .categories {
-    display: flex; /* Flexbox layout for non-scrollable design */
-    justify-content: center; /* Center items */
-    gap: 30px; /* Space between items */
-    overflow: hidden; /* Disable horizontal scrolling */
-  }
-
-  .categories a {
-    flex: 0 0 auto; /* Allow default size for desktop */
+   .categories img {
+    width: 100%; /* Make the image occupy the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 5px; /* Rounded corners */
   }
 }
+
+
 
 
