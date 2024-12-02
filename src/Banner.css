@@ -9,7 +9,7 @@
 /* Banner image */
 .banner img {
   width: 100%;
-  height: auto; /* Ensure image fills the entire container */
+  height: 100%; /* Ensure image fills the entire container */
   object-fit: cover; /* Ensure the image fully covers the container without distortion */
   object-position: center; /* Keeps the image centered */
   display: block; /* Removes extra space below the image */
