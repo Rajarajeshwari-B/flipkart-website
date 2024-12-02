@@ -18,16 +18,17 @@
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
-  /* Adjust the height for smaller screens */
+  /* Adjust the height dynamically for smaller screens */
   .banner {
-    height: auto; /* Set height to auto for mobile */
-    margin: 0; /* Remove any margin to eliminate gaps */
+    height: 70vh; /* Use 70% of the viewport height */
+    margin: 0; /* Ensure no gap around the banner */
   }
 
   .banner img {
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
-    height: 100%; /* Ensure the image fills the container */
-    width: 100%; /* Ensure the width is full */
+    width: 100%; /* Ensure the image stretches to full width */
+    height: auto; /* Maintain aspect ratio */
   }
 }
+
