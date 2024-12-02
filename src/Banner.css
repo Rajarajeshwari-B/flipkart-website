@@ -2,33 +2,32 @@
 .banner {
   position: relative;
   width: 100%;
-  height: 500px; /* Default height for larger screens */
-  overflow: hidden;
+  height: 100vh; /* Set the height to cover the full viewport height */
+  overflow: hidden; /* Prevent any overflow */
   margin: 0; /* Ensure no gap around the banner */
 }
 
 /* Banner image */
 .banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container without distortion */
+  height: 100%; /* Ensure it fills the entire container */
+  object-fit: cover; /* Ensures the image fully covers the container */
   object-position: center; /* Centers the image in the container */
-  display: block; /* Removes extra space below the image */
+  display: block; /* Removes any space below the image */
 }
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
-  /* Adjust the height dynamically for smaller screens */
+  /* On mobile devices, maintain full height */
   .banner {
-    height: 100vh; /* Use 70% of the viewport height */
-    
+    height: 100vh; /* Set height to full viewport height */
   }
 
   .banner img {
-    object-fit: contain; /* Ensure the image is fully visible without cropping */
+    width: 100%; /* Ensure the width is full */
+    height: 100%; /* Ensure the height is full to avoid blank space */
+    object-fit: cover; /* Make sure the image covers the container without distortion */
     object-position: center; /* Keep the image centered */
-    width: 100%; /* Ensure the image stretches to full width */
-    height: 100%; /* Maintain aspect ratio */
   }
 }
 
