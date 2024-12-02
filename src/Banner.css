@@ -15,7 +15,7 @@
   object-fit: cover; /* Ensure the image fully covers the container without distortion */
   object-position: center; /* Keeps the image centered */
   display: block; /* Removes extra space below the image */
-  margin:0;
+  margin-bottom: 0;
 }
 
 /* Arrow button styling */
@@ -60,7 +60,7 @@
     object-position: center; /* Keep the image centered */
     width: 100%;
     height: auto; /* Ensure image takes up full height */
-    margin:0;
+    margin-bottom: 0;
   }
 
   .arrow {
