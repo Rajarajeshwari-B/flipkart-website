@@ -6,6 +6,7 @@
   padding: 10px 20px; /* Padding around the navbar */
   border-radius: 5px;
   overflow-x: auto; /* Allows horizontal scrolling if needed */
+  white-space: nowrap; /* Prevent wrapping to a new line */
 }
 
 .categories a {
@@ -30,22 +31,27 @@
 /* For small screens or mobile devices */
 @media (max-width: 768px) {
   .categories {
-    display: grid; /* Use grid for mobile */
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* Ensure consistent sizing */
-    gap: 10px; /* Adjust gap for mobile */
-    justify-content: center;
+    display: flex; /* Horizontal flex layout for single-line scrolling */
+    justify-content: flex-start; /* Align to the start */
+    gap: 15px; /* Adjust gap for compact design */
+    padding: 5px 10px; /* Reduce padding to lower height */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    scrollbar-width: thin; /* Reduce scrollbar thickness (for browsers that support it) */
+  }
+
+  .categories::-webkit-scrollbar {
+    height: 4px; /* Thin scrollbar for horizontal scroll */
+  }
+
+  .categories::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb color */
+    border-radius: 2px; /* Rounded scrollbar */
   }
 
   .categories a {
-    font-size: 12px; /* Adjust font size for readability */
-    padding: 6px; /* Adjust padding for compact design */
-  }
-
-  .categories img {
-    width: 70px; /* Uniform image width */
-    height: 70px; /* Uniform image height */
-    object-fit: cover; /* Keep images proportional */
-    border-radius: 5px; /* Consistent border radius */
+    font-size: 14px; /* Slightly smaller font size for mobile */
+    padding: 6px 10px; /* Adjust padding for compact height */
   }
 }
 
@@ -57,4 +63,5 @@
     gap: 30px; /* Space between links */
   }
 }
+
 
