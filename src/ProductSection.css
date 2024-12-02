@@ -129,7 +129,7 @@
 
   .product-item img {
     width: 100%; /* Make image take up full width */
-    height: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
