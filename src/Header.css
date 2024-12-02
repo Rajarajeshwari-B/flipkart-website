@@ -67,31 +67,32 @@
   width: auto; /* Allow the nav-links to take the necessary space */
 }
 
-.nav-links a,
-.nav-links button {
-  background-color: #2874f0;
-  border: none;
-  color: white;
-  padding: 6px 15px; /* Reduced padding to make buttons smaller */
-  border-radius: 20px;
-  font-size: 14px; /* Increased font size for better visibility */
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
-}
+
 
 /* Link styles */
 .nav-links a {
   text-decoration: none;
 }
 
-.nav-links button:hover,
-.nav-links a:hover {
+
+.nav-links button {
+  background-color: #2874f0;
+  border: none;
+  color: white;
+  padding: 6px 15px; /* Adjusted padding */
+  border-radius: 20px;
+  font-size: 14px; /* Adjust font size */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth hover transition */
+  text-decoration: none; /* Ensure links have no underline */
+}
+
+
+.nav-links button:hover {
   background-color: white; /* White background on hover */
   color: #2874f0; /* Flipkart blue color for text */
-  border-radius: 4px; /* Slightly less rounded corners for a rectangle */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the button */
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
 
 /* For Dropdown Buttons */
@@ -244,4 +245,5 @@
     height: auto; 
   }
 }
+
 
