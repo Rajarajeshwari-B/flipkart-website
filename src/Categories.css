@@ -1,70 +1,63 @@
 /* Categories Navigation Styles */
 .categories {
   display: flex;
-  justify-content: center; /* Center the categories horizontally */
-  gap: 30px; /* Space between the links */
-  padding: 10px 20px; /* Padding around the navbar */
-  border-radius: 5px;
-  overflow-x: auto; /* Allows horizontal scrolling if needed */
-  white-space: nowrap; /* Prevent wrapping to a new line */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 15px; /* Space between items */
+  padding: 10px; /* Padding around the section */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  scroll-behavior: smooth; /* Smooth scrolling for better UX */
 }
 
 .categories a {
   text-decoration: none; /* Remove underline from links */
-  font-size: 16px; /* Keep original font size */
+  font-size: 16px; /* Keep font size */
   font-weight: 500; /* Medium weight for readability */
-  padding: 8px 15px; /* Padding for the links */
+  padding: 8px 15px; /* Padding for links */
   text-align: center;
-  border-radius: 5px; /* Rounded corners for the links */
+  border-radius: 5px; /* Rounded corners */
   color: blue;
 }
 
 .categories a:hover {
   text-decoration: underline;
-  color: black; /* Change text color to black on hover */
+  color: black; /* Change color on hover */
 }
 
 .categories a:active {
-  transform: scale(0.98); /* Slight scale-down effect when the link is clicked */
+  transform: scale(0.98); /* Slight scale-down on click */
 }
 
-/* For small screens or mobile devices */
+.categories img {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: cover; /* Keep image proportions */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Mobile-specific styles */
 @media (max-width: 768px) {
   .categories {
-    display: flex; /* Horizontal flex layout for single-line scrolling */
-    justify-content: flex-start; /* Align to the start */
-    gap: 15px; /* Adjust gap for compact design */
-    padding: 5px 10px; /* Reduce padding to lower height */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping */
-    scrollbar-width: thin; /* Reduce scrollbar thickness (for browsers that support it) */
+    padding: 5px 10px; /* Reduce padding for compact design */
+    gap: 10px; /* Reduce gap for mobile */
+    overflow-x: auto; /* Horizontal scrolling for mobile */
+    white-space: nowrap; /* Ensure all items stay in a single row */
   }
 
   .categories::-webkit-scrollbar {
-    height: 4px; /* Thin scrollbar for horizontal scroll */
+    height: 5px; /* Thin scrollbar for horizontal scroll */
   }
 
   .categories::-webkit-scrollbar-thumb {
-    background: #888; /* Scrollbar thumb color */
-    border-radius: 2px; /* Rounded scrollbar */
+    background-color: #bbb; /* Subtle scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
   }
 
-  .categories img {
-    width: 100px; /* Maintain the current image size */
-    height: 100px;
-    object-fit: cover; /* Keep the images proportional */
-    border-radius: 5px; /* Consistent border radius */
+  .categories::-webkit-scrollbar-track {
+    background: transparent; /* Transparent scrollbar track */
   }
 }
 
-/* For laptops and larger screens */
-@media (min-width: 769px) {
-  .categories {
-    display: flex; /* Retain the original flex layout */
-    justify-content: center; /* Center the items */
-    gap: 30px; /* Space between links */
-  }
-}
 
 
 
