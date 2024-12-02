@@ -15,6 +15,7 @@
   object-fit: cover; /* Ensure the image fully covers the container without distortion */
   object-position: center; /* Keeps the image centered */
   display: block; /* Removes extra space below the image */
+  margin:0;
 }
 
 /* Arrow button styling */
@@ -51,8 +52,7 @@
   /* Adjust the height for smaller screens */
   .banner {
     height: 300px; /* Reduced height for mobile to ensure visibility */
-     margin-bottom: 0; /* Remove any space below the banner */
-  padding: 0; /* Ensure no padding creates extra space */
+     
   }
 
   .banner img {
@@ -60,14 +60,14 @@
     object-position: center; /* Keep the image centered */
     width: 100%;
     height: auto; /* Ensure image takes up full height */
+    margin:0;
   }
 
   .arrow {
     font-size: 20px; /* Slightly smaller arrows for mobile */
     padding: 8px; /* Adjust padding for smaller screens */
     top: 60%; /* Keep the arrows centered vertically */
-     margin-bottom: 0; /* Remove any space below the banner */
-  padding: 0; /* Ensure no padding creates extra space */
+     
   }
 
   .arrow-left {
