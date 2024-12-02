@@ -49,7 +49,7 @@
   /* Adjust the height for smaller screens */
   .banner {
     height: 400px; /* Reduced height for mobile to ensure visibility */
-    width: 100%;
+    width: 200%;
   }
 
   .banner img {
