@@ -54,11 +54,21 @@
   .banner img {
     object-fit: contain; /* Ensure the image is fully visible without cropping */
     object-position: center; /* Keep the image centered */
+    width:100%;
+    height:auto;
   }
 
   .arrow {
     font-size: 20px; /* Slightly smaller arrows for mobile */
     padding: 8px; /* Adjust padding for smaller screens */
+    top: 50%;
+  }
+  .arrow-left {
+    left: 5px; /* Adjust arrow position for mobile */
+  }
+
+  .arrow-right {
+    right: 5px; /* Adjust arrow position for mobile */
   }
 }
 
