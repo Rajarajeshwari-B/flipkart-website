@@ -114,7 +114,6 @@
   background-color: #43a047;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .product-list {
     display: grid;
@@ -128,8 +127,12 @@
   }
 
   .product-item img {
-    width: 100%; /* Make image take up full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Ensure image spans the width of the container */
+    max-width: 150px; /* Set a fixed maximum width */
+    height: 120px; /* Fixed height */
+    object-fit: contain; /* Ensure the image fits within the dimensions */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper alignment in grid */
   }
 
   /* Adjust font size for smaller screens */
