@@ -197,64 +197,51 @@
   color: #888;
 }
 
-/* Mobile-Specific Styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: row;
     align-items: center;
-    padding: 10px 15px; /* Reduced padding */
+    justify-content: space-between; /* Keep items on the same line */
+    padding: 10px 15px;
+  }
+
+  .product-img {
+    width: 70px; /* Fixed width */
+    height: 70px; /* Fixed height */
+    object-fit: cover; /* Ensure consistent aspect ratio */
+    border-radius: 5px; /* Optional: consistent border radius */
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Add some spacing */
-  }
-
-  .logo img {
-    width: 50px; /* Smaller logo size for mobile */
+    margin-right: 10px;
   }
 
   .search-bar {
-    width: 90%; /* Full-width search bar */
-    margin-bottom: 10px; /* Add spacing between search and nav links */
+    width: 50%; /* Adjust width of the search bar */
+    margin-top: 10px;
+  }
+
+  .search-bar input {
+    width: 85%;
   }
 
   .nav-links {
-    display: flex;
-    justify-content: space-around; /* Space out links evenly */
-    width: 100%; /* Full width for nav links */
+    flex-direction: row;
+    gap: 6px; /* Reduced gap between links */
+    width: auto;
+    justify-content: flex-end; /* Keep nav links aligned to the right */
+    flex-wrap: nowrap; /* Prevent wrapping */
   }
 
-  .nav-links a,
   .nav-links button {
-    text-align: center; /* Center-align text */
-    font-size: 12px; /* Adjust font size for mobile */
-    color: white;
-    background-color: transparent; /* Remove background for cleaner look */
-    border: none;
-    padding: 5px; /* Add spacing for better clickability */
-    cursor: pointer;
+    padding: 6px 6px; /* Adjust padding for smaller buttons */
+    font-size: 12px;
+    width: auto;
   }
 
-  .nav-links a:hover,
-  .nav-links button:hover {
-    color: #ffcc00; /* Flipkart Plus yellow on hover */
-  }
-
-  .search-results {
-    position: absolute;
-    top: 110%; /* Adjust position below search bar */
-    left: 5%;
-    width: 90%; /* Align with search bar width */
-    max-height: 300px; /* Limit height for scrolling */
-    overflow-y: auto;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 10;
+  /* Reduce navbar height on mobile */
+  .navbar {
+    height: auto; 
   }
 }
-
-
 
