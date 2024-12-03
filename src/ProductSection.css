@@ -114,49 +114,54 @@
   background-color: #43a047;
 }
 
-/* Responsive Design */
-/* Responsive Design */
 @media (max-width: 768px) {
-  .product-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-    gap: 15px; /* Slightly reduce gap for better spacing */
-  }
-
   .product-item {
-    max-width: none; /* Remove max-width so it fits in the grid */
-    min-width: auto; /* Allow item to fully adapt to grid layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing for content */
+    max-width: none; /* Remove max-width */
+    min-width: auto; /* Flexible width */
+    height: 320px; /* Set a fixed height for uniformity */
   }
 
   .product-item img {
-    width: 100%; /* Make image take up full width */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Adjust font size for smaller screens */
-  .category h2 {
-    font-size: 1.4rem; /* Slightly reduce font size */
+    flex-shrink: 0;
+    width: 100%; /* Full width image */
+    height: 120px; /* Fixed height for images */
+    object-fit: contain; /* Ensure the image fits without distortion */
+    margin-bottom: 10px; /* Consistent spacing below the image */
   }
 
   .product-item p {
-    font-size: 0.9rem; /* Slightly smaller text */
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+    text-align: center; /* Center align text for consistency */
+    min-height: 40px; /* Fixed height for titles */
   }
 
   .product-item .price {
-    font-size: 0.95rem; /* Adjust price text size */
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    color: #222;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
   }
 
-  /* Buttons alignment and size adjustments */
   .product-item .buttons {
+    margin-top: auto; /* Push buttons to the bottom */
+    display: flex;
     flex-direction: column; /* Stack buttons vertically */
-    gap: 8px; /* Adjust gap between buttons */
+    gap: 8px;
+    align-items: center; /* Center align buttons */
   }
 
   .add-to-cart,
   .buy-now {
-    flex: none; /* Remove flex stretching */
-    width: 100%; /* Make buttons full-width */
-    font-size: 0.85rem; /* Reduce font size for buttons */
-    padding: 8px; /* Adjust padding for smaller screens */
+    width: 90%; /* Uniform button width */
+    font-size: 0.85rem;
+    padding: 8px;
   }
 }
