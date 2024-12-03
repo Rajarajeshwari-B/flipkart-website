@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Header.css';
+import { FaSearch, FaUser, FaShoppingCart, FaHome } from 'react-icons/fa'; // React Icons example
 import FlipkartLogo from './assets/flipkart logo.png';
+import './Header.css';
 import { productData } from './CategoryItems.js'; // Import product data
 
-// Utility function to generate slugs
 const generateSlug = (name) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
@@ -29,10 +29,10 @@ const Header = ({ cartCount }) => {
   };
 
   const handleProductClick = (productName) => {
-    const slug = generateSlug(productName); // Generate slug from product name
+    const slug = generateSlug(productName);
     setSearchQuery('');
     setFilteredProducts([]);
-    navigate(`/product/${slug}`); // Navigate using the slug
+    navigate(`/product/${slug}`);
   };
 
   return (
@@ -48,27 +48,33 @@ const Header = ({ cartCount }) => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder=" Search for products..."
+          placeholder="Search for products..."
           value={searchQuery}
           onChange={handleSearch}
         />
-        <button>🔍</button>
+        <button>
+          <FaSearch />
+        </button>
       </div>
 
       {/* Navigation Links */}
       <div className="nav-links">
         <Link to="/">
-          <button>Home 🏠</button>
+          <button>
+            <FaHome /> Home
+          </button>
         </Link>
         <Link to="/login">
-          <button>Login ☑️</button>
+          <button>
+            <FaUser /> Login
+          </button>
         </Link>
         <Link to="/become-seller">
           <button>Become a Seller</button>
         </Link>
         <Link to="/cart">
           <button>
-            Cart 🛒<span id="cart-count">({cartCount})</span>
+            <FaShoppingCart /> Cart <span id="cart-count">({cartCount})</span>
           </button>
         </Link>
       </div>
@@ -107,3 +113,4 @@ const Header = ({ cartCount }) => {
 };
 
 export default Header;
+
