@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaSearch, FaUser, FaShoppingCart, FaHome } from 'react-icons/fa'; // React Icons example
-import FlipkartLogo from './assets/flipkart logo.png';
 import './Header.css';
+import FlipkartLogo from './assets/flipkart logo.png';
 import { productData } from './CategoryItems.js'; // Import product data
 
+// Utility function to generate slugs
 const generateSlug = (name) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
@@ -29,10 +29,10 @@ const Header = ({ cartCount }) => {
   };
 
   const handleProductClick = (productName) => {
-    const slug = generateSlug(productName);
+    const slug = generateSlug(productName); // Generate slug from product name
     setSearchQuery('');
     setFilteredProducts([]);
-    navigate(`/product/${slug}`);
+    navigate(`/product/${slug}`); // Navigate using the slug
   };
 
   return (
@@ -48,33 +48,27 @@ const Header = ({ cartCount }) => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search for products..."
+          placeholder="🔍 Search for products..."
           value={searchQuery}
           onChange={handleSearch}
         />
-        <button>
-          <FaSearch />
-        </button>
+        <button>🔍</button>
       </div>
 
       {/* Navigation Links */}
       <div className="nav-links">
         <Link to="/">
-          <button>
-            <FaHome /> Home
-          </button>
+          <button>Home 🏠</button>
         </Link>
         <Link to="/login">
-          <button>
-            <FaUser /> Login
-          </button>
+          <button>Login ☑️</button>
         </Link>
         <Link to="/become-seller">
           <button>Become a Seller</button>
         </Link>
         <Link to="/cart">
           <button>
-            <FaShoppingCart /> Cart <span id="cart-count">({cartCount})</span>
+            Cart 🛒<span id="cart-count">({cartCount})</span>
           </button>
         </Link>
       </div>
@@ -113,4 +107,5 @@ const Header = ({ cartCount }) => {
 };
 
 export default Header;
+
 
