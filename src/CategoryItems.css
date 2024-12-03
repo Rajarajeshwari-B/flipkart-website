@@ -33,12 +33,13 @@
   }
   
   .item img {
-    width: 100%;
-    height: 180px; /* Fixed image height */
-    object-fit: cover; /* Maintain image aspect ratio */
-    margin-bottom: 15px;
-    border-radius: 8px;
-  }
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height */
+  object-fit: contain; /* Ensure the entire image is visible */
+  margin-bottom: 15px;
+  border-radius: 8px; /* Keep the rounded corners */
+}
+
   
   .item h3 {
     font-size: 1.2rem;
