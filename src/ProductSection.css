@@ -115,11 +115,12 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .product-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-    gap: 20px; /* Adjust gap between items */
+    gap: 15px; /* Slightly reduce gap for better spacing */
   }
 
   .product-item {
@@ -131,5 +132,31 @@
     width: 100%; /* Make image take up full width */
     height: auto; /* Maintain aspect ratio */
   }
-}
 
+  /* Adjust font size for smaller screens */
+  .category h2 {
+    font-size: 1.4rem; /* Slightly reduce font size */
+  }
+
+  .product-item p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  .product-item .price {
+    font-size: 0.95rem; /* Adjust price text size */
+  }
+
+  /* Buttons alignment and size adjustments */
+  .product-item .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px; /* Adjust gap between buttons */
+  }
+
+  .add-to-cart,
+  .buy-now {
+    flex: none; /* Remove flex stretching */
+    width: 100%; /* Make buttons full-width */
+    font-size: 0.85rem; /* Reduce font size for buttons */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
